@@ -83,10 +83,15 @@
 <body>
 
 <h1>your name, sweetheart</h1>
-<input type="text" id="username" placeholder="name, my patootie">
+<input type="text" id="username" placeholder="Your Name">
 <button onclick="showLove()">click for love</button>
 
 <div id="message"></div>
+
+<audio id="loveSong" loop>
+    
+    <source src="c:\Users\Acer\Downloads\yung kai - blue (Karaoke Version).mp3">
+</audio>
 
 <script>
 function showLove() {
@@ -95,13 +100,19 @@ function showLove() {
     const song = document.getElementById("loveSong");
 
     if (name === "") {
-        messageDiv.innerHTML = "enter your name, sweetheart 💞";
+        messageDiv.innerHTML = "enter your name, patootie 💞";
         return;
     }
 
-    messageDiv.innerHTML = `💖 ${name}, my baby. i love you so much! 💖`;
+    messageDiv.innerHTML = `💖 ${name}, hi mi amore. i love you so much! 💖`;
+    messageDiv.innerHTML = `every time i think of you, my heart blooms with a thousand flowers just for you `;
 
-    
+    // Start music
+    song.play().catch(() => {
+        alert("Tap the screen to allow music playback 🎶");
+    });
+
+    // Floating hearts & flowers
     for (let i = 0; i < 25; i++) {
         const elem = document.createElement("div");
         elem.classList.add(Math.random() > 0.5 ? "heart" : "flower");
