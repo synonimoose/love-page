@@ -82,16 +82,16 @@
 </head>
 <body>
 
-<h1>enter your name, my love 💕</h1>
-<input type="text" id="username" placeholder="name, please">
-<button onclick="showLove()">click me </button>
+<h1>your name, sweetheart</h1>
+<input type="text" id="username" placeholder="Your Name">
+<button onclick="showLove()">click for love</button>
 
 <div id="message"></div>
 
 <!-- Background Music -->
 <audio id="loveSong" loop>
     <!-- You can replace this MP3 link with your favorite romantic song -->
-    <source src="https://audio.com/borhani/audio/yung-kai-blue-official-audio-ezmp3">
+    <source src="c:\Users\Acer\Downloads\yung kai - blue (Karaoke Version).mp3">
 </audio>
 
 <script>
@@ -101,11 +101,11 @@ function showLove() {
     const song = document.getElementById("loveSong");
 
     if (name === "") {
-        messageDiv.innerHTML = "please enter your name, sweetheart 💞";
+        messageDiv.innerHTML = "Please enter your name, sweetheart 💞";
         return;
     }
 
-    messageDiv.innerHTML = `💖 ${name}! you are always be loved by me, i love you so much, mi amore! 💖`;
+    messageDiv.innerHTML = `💖 ${name}! You are my sunshine! 💖`;
 
     // Start music
     song.play().catch(() => {
@@ -115,8 +115,8 @@ function showLove() {
     // Floating hearts & flowers
     for (let i = 0; i < 25; i++) {
         const elem = document.createElement("div");
-        elem.classList.add(Math.random() > 0.5 ? "heart" : "flower" : "ribbon");
-        elem.innerHTML = Math.random() > 0.5 ? "💗" : "🌸" :"🎀";
+        elem.classList.add(Math.random() > 0.5 ? "heart" : "flower");
+        elem.innerHTML = Math.random() > 0.5 ? "💗" : "🌸";
         elem.style.left = Math.random() * 100 + "vw";
         elem.style.animationDuration = (3 + Math.random() * 4) + "s";
         document.body.appendChild(elem);
