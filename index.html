@@ -88,10 +88,6 @@
 
 <div id="message"></div>
 
-<audio autoplay loop>
-  <source src="https://github.com/synonimoose/for-you-baby/blob/main/yung%20kai%20-%20blue%20(Karaoke%20Version).mp3" type="audio/mpeg">
-</audio>
-
 <script>
 function showLove() {
     const name = document.getElementById("username").value.trim();
@@ -105,12 +101,7 @@ function showLove() {
 
     messageDiv.innerHTML = `💖 ${name}, my baby. i love you so much! 💖`;
 
-    // Start music
-    song.play().catch(() => {
-        alert("Tap the screen to allow music playback 🎶");
-    });
-
-    // Floating hearts & flowers
+    
     for (let i = 0; i < 25; i++) {
         const elem = document.createElement("div");
         elem.classList.add(Math.random() > 0.5 ? "heart" : "flower");
